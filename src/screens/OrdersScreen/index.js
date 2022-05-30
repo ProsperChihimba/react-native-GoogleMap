@@ -56,8 +56,8 @@ const OrdersScreen = () => {
         <View style={{ flex: 1, backgroundColor: 'lightblue', }}>
             <MapView
                 style={{ height, width }}
-                showsUserLocation
-                followsUserLocation
+                // showsUserLocation
+                // followsUserLocation
                 initialRegion={{
                     latitude: driverLocation.latitude,
                     longitude: driverLocation.longitude,
@@ -66,12 +66,12 @@ const OrdersScreen = () => {
                 }}
             >
                 <MapViewDirections
-                    origin={driverLocation}
-                    destination={{ latitude: -6.71542541503906, longitude: 37.508738403320305 }}
+                    origin={{ latitude: 37.3318456, longitude: -122.0296002 }}
+                    destination={{ latitude: 37.771707, longitude: -122.4053769 }}
                     strokeWidth={8}
                     strokeColor="green"
-                    waypoints={{ latitude: -6.71542541503906, longitude: 37.508738403320305 }}
-                    apikey={"AIzaSyCKrxJJwuadxB_XCKQ3npXbc4AtBLfVSn0"}
+                    // waypoints={{ latitude: -6.71542541503906, longitude: 37.508738403320305 }}
+                    apikey={""}
                     onReady={(result) => {
                         setTotalminutes(result.duration)
                         setTotalKm(result.distance)
